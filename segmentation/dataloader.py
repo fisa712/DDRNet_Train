@@ -34,13 +34,14 @@ class CustomSegmentationDataset(Dataset):
 
 
 
+# uncomment if you want to apply transformations
 
-train_transform = transforms.Compose([
-    transforms.Resize((512, 512)),  # Resize images to a consistent size
-    transforms.RandomHorizontalFlip(),  # Random horizontal flip
-    transforms.ToTensor(),  # Convert PIL image to tensor
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # Normalization
-])
+# train_transform = transforms.Compose([
+#     transforms.Resize((512, 512)),  # Resize images to a consistent size
+#     transforms.RandomHorizontalFlip(),  # Random horizontal flip
+#     transforms.ToTensor(),  # Convert PIL image to tensor
+#     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # Normalization
+# ])
 
 # Create dataset and dataloader
 train_dataset = CustomSegmentationDataset(img_dir='/path/to/train/images',

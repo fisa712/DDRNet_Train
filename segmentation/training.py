@@ -9,8 +9,6 @@ cfg = None
 NUM_CLASSES = 1
 
 
-
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = get_seg_model(cfg, num_classes=NUM_CLASSES).to(device)
 criterion = nn.CrossEntropyLoss()  # Cross-entropy loss for segmentation
@@ -54,3 +52,5 @@ torch.save(model.state_dict(), 'ddrnet_custom.pth')
 
 # To load it later:
 # model.load_state_dict(torch.load('ddrnet_custom.pth'))
+
+# eval on your test data now
