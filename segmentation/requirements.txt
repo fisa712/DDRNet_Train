@@ -1,0 +1,4 @@
+torch  # Adjust based on your PyTorch version (with CUDA if available)
+torchvision  # This should match the version of torch you're using
+numpy
+Pillow
